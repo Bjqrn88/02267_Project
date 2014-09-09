@@ -2,3 +2,5 @@
 =============
 
 First C# project 
+
+Shit hvor bliver det godt
