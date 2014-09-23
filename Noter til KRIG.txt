@@ -1,0 +1,22 @@
+MVVM -- Hvordan passer det ind i MVVM
+	View - 	Hele GUI'en til spillet, med knapper, animationer, kort, mm.
+	ViewModel -	interfacer mellem GUI og spil logik, og har bindings mellem forskellige 
+				dele af programmet
+	Model -	Vores datatyper samt lidt logik
+
+GUI -- Hvordan skal det se ud
+	Alex har tegnet en FLOT tegning
+
+HotKeys -- Hvilke hotkeys kan implementeres 
+	Undo = CTRL + Z
+	Redo = CTRL + R
+	Næste kort = Space
+	New Game = CTRL + N
+	Cheat game = L+I+M (Man få alle de høje kort)
+
+KravSpec -- uddybende kravspecifikation
+	Dem har vi 
+
+DLL -- Hvad skal den bruges til
+	Skal indeholde al spillogik, gemme spillet
+	
