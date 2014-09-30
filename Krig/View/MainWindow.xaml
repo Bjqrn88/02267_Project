@@ -1,0 +1,11 @@
+﻿<Window x:Class="Krig.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:view="clr-namespace:Krig.View"
+        Title="MainWindow" Height="600" Width="800">
+    <DockPanel>
+        <view:RibbonMenu DockPanel.Dock="Top"/>
+        <view:Board />
+       
+    </DockPanel>
+</Window>
