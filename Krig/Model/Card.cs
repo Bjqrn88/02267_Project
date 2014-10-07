@@ -54,6 +54,11 @@ namespace Krig.ViewModel
                 this.suit = value;
             }
         }
+        public override String ToString()
+        {
+            String s = "The card is: " + value + " of " + suit;
+            return s;
+        }
         
     }
 }
