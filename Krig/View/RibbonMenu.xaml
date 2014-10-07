@@ -7,8 +7,13 @@
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
         <Ribbon Title="Krig" x:Name="ribbon">
-            <RibbonTab Header="Test" />
-            <RibbonTab Header="Test2" />
+            <!-- <RibbonTab Header="Test" />-->
+            <RibbonTab Header="Commands">
+                <RibbonButton Label="New Game"/>
+                <RibbonButton Label="Undo"/>
+                <RibbonButton Label="Redo"/>
+                <RibbonButton Label="Cheat"/>
+            </RibbonTab>
         </Ribbon>
     </Grid>
 </UserControl>
