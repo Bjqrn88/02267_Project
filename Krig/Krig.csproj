@@ -64,9 +64,6 @@
     <Compile Include="View\board.xaml.cs">
       <DependentUpon>board.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\NewRibbon.xaml.cs">
-      <DependentUpon>NewRibbon.xaml</DependentUpon>
-    </Compile>
     <Compile Include="View\RibbonMenu.xaml.cs">
       <DependentUpon>RibbonMenu.xaml</DependentUpon>
     </Compile>
@@ -84,10 +81,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="View\board.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\NewRibbon.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
