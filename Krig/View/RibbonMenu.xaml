@@ -1,22 +1,24 @@
-﻿<r:UserControl
+﻿<UserControl
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:r="clr-namespace:Microsoft.Windows.Controls.Ribbon;assembly=RibbonControlsLibrary"
+             xmlns:r="clr-namespace:System.Windows.Controls.Ribbon;assembly=System.Windows.Controls.Ribbon"
              xmlns:local="clr-namespace:Krig.View" x:Class="Krig.View.RibbonMenu" 
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
-        <Ribbon Title="Krig" x:Name="ribbon">
+        <r:Ribbon Title="Krig" x:Name="ribbon">
             <!-- <RibbonTab Header="Test" />-->
-            <RibbonTab Header="Commands">
+            <r:RibbonTab Header="Commands">
                 <!-- kig her http://teusje.wordpress.com/2009/08/12/wpf-office-ribbon-control/ -->
-                <RibbonButton Label="New Game"/>
-                <RibbonButton Label="Undo"/>
-                <RibbonButton Label="Redo"/>
-                <RibbonButton Label="Cheat"/>
-            </RibbonTab>
-        </Ribbon>
+                <r:RibbonGroup>
+                    <r:RibbonButton Label="New Game" Width="66" Height="65"/>
+                    <r:RibbonButton Label="Undo" Width="50" Height="65"/>
+                    <r:RibbonButton Label="Redo" Width="50" Height="65"/>
+                    <r:RibbonButton Label="Cheat" Width="50" Height="65"/>
+                </r:RibbonGroup>
+            </r:RibbonTab>
+        </r:Ribbon>
     </Grid>
-</r:UserControl>
+</UserControl>
