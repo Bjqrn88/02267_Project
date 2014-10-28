@@ -17,6 +17,12 @@ HotKeys -- Hvilke hotkeys kan implementeres
 KravSpec -- uddybende kravspecifikation
 	Dem har vi 
 
+	Max 3 undo's
+	
+	
 DLL -- Hvad skal den bruges til
 	Skal indeholde al spillogik, gemme spillet
 	
+	
+Akritektur: 
+	Galasoft light
