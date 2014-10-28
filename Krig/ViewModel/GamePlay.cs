@@ -8,7 +8,7 @@ namespace Krig.ViewModel
 {
     class GamePlay
     {
-        private ArrayList deck1, deck2, warWinnings;
+        private ArrayList deck1, deck2, swapPile1, swapPile2, warWinnings;
         private Random random = new Random();
 
         public GamePlay()
@@ -107,8 +107,9 @@ namespace Krig.ViewModel
         }
         private void play() {
             //Setup swap piles
-            ArrayList swapPile1 = new ArrayList();
-            ArrayList swapPile2 = new ArrayList();
+            swapPile1 = new ArrayList();
+            swapPile2 = new ArrayList();
+            warWinnings = new ArrayList();
             int turnCounter = 1;
             do {
                 Console.WriteLine("Turn " + turnCounter + " begins");
@@ -139,8 +140,18 @@ namespace Krig.ViewModel
                 if (player1Card.Value == player2Card.Value)
                 {
                     Console.WriteLine("War declared");
-                    swapPile1.Add(player1Card);
-                    swapPile2.Add(player2Card);
+                    if (war())
+                    {
+                        moveCards(warWinnings, swapPile1);
+                        swapPile1.Add(player1Card);
+                        swapPile1.Add(player2Card);
+                    }
+                    else
+                    {
+                        moveCards(warWinnings, swapPile2);
+                        swapPile2.Add(player1Card);
+                        swapPile2.Add(player2Card);
+                    }
                 }
                 //Player 1 wins
                 else if(player1Card.Value > player2Card.Value)
@@ -172,8 +183,10 @@ namespace Krig.ViewModel
             ArrayList player2Cards = drawCards(deck2);
             
             //Add cards to war array
-            
+            moveCards(player1Cards, warWinnings);
+            moveCards(player2Cards, warWinnings);
 
+            //Select card
             int player1Pick = random.Next(0, 2);
             Card player1Card = (Card) player1Cards[player1Pick];
 
@@ -183,7 +196,6 @@ namespace Krig.ViewModel
             //Player 1 wins
             if (player1Card.Value > player2Card.Value)
             {
-
                 return true;
             }
             //Player 2 wins
@@ -208,8 +220,21 @@ namespace Krig.ViewModel
             for (int i = 0; i < 3; i++)
             {
                 cards.Add(deck[i]);
+                deck.Remove(i);
             }
             return cards;
+        }
+        /**
+         * Moves cards from one array to another.
+        */
+        private void moveCards(ArrayList from, ArrayList to) 
+        {
+            for (int i = 0; i < from.Count; i++)
+            {
+                Card c = (Card)from[i];
+                to.Add(c);
+                //to.Add((Card)from[i]);
+            }
         }
     }
 
