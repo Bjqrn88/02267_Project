@@ -60,7 +60,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Model\Card.cs" />
-    <Compile Include="ViewModel\StartUp.cs" />
+    <Compile Include="ViewModel\GamePlay.cs" />
     <Compile Include="View\board.xaml.cs">
       <DependentUpon>board.xaml</DependentUpon>
     </Compile>
